@@ -13,7 +13,14 @@ import seaborn as sns
 
 
 # Download necessary NLTK data
-nltk.download('punkt')
+import nltk
+from nltk.data import find
+try:
+    # 檢查 'punkt' 是否已經存在
+    find('tokenizers/punkt')
+except LookupError:
+    # 如果不存在則下載
+    nltk.download('punkt', download_dir='./nltk_data')
 nltk.download('stopwords')
 
 # Load Data
