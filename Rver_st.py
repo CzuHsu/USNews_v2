@@ -1,21 +1,6 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
-from wordcloud import WordCloud
-import matplotlib.colors as mcolors
-from scipy.stats import ttest_ind
-import nltk
-from nltk.tokenize import word_tokenize
-from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
-from nltk.corpus import stopwords
-import re
-import seaborn as sns
 
-
-# Download necessary NLTK data
-import nltk
-nltk.download('punkt')
-nltk.download('stopwords')
 
 # Load Data
 nyt_data = pd.read_csv("NT.csv")  
